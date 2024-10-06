@@ -25,10 +25,11 @@ This is my personal portfolio website built using React. It includes sections su
    ```
    npm install
 
-
+ 
 ### Project Setup
    ```
    npm start
+ ```
 ### Project Structure
    ```
        src/
