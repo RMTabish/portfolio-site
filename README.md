@@ -18,23 +18,23 @@ This is my personal portfolio website built using React. It includes sections su
 
 ### Installation
 1. Clone the repository:
-   ```bash
+   ```
    git clone https://github.com/your-username/portfolio.git
    cd portfolio
 2. Install dependencies:
-   ```bash
+   ```
    npm install
 
 
 ### Project Setup
- ``bash
+    ```
     npm start
 
 
 
 
 ## Project Structure
-    ``bash
+    ```
        src/
     ├── components/
     │   ├── Head.js         # The main header component
