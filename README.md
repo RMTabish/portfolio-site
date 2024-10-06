@@ -27,14 +27,10 @@ This is my personal portfolio website built using React. It includes sections su
 
 
 ### Project Setup
-    ```
-    npm start
-
-
-
-
-## Project Structure
-    ```
+   ```
+   npm start
+### Project Structure
+   ```
        src/
     ├── components/
     │   ├── Head.js         # The main header component
