@@ -4,8 +4,7 @@ import Head from './components/Head';
 
 import Home from './components/home';
 
-import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
-
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 
 
 function App() {
