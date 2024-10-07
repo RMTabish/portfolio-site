@@ -1,24 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
 import Head from './components/Head';
+import Home from './components/home'; // Correctly import based on file name
 
-import Home from './components/home';
-
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-
+import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom'; // Import Navigate for redirect
 
 function App() {
   return (
-   <Router>
-    <div className='App'>
-      <Head/>
-      <Routes>
-        <Route path='/' element={<Home/>}></Route>
-
-      </Routes>
-
-    </div>
-   </Router>
+    <Router>
+      <div className='App'>
+        <Head />
+        <Routes>
+          {/* Route for the home page */}
+          <Route path="/" element={<Home />} />
+          
+          {/* Redirect any invalid paths to the home page */}
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
