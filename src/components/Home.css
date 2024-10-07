@@ -1,0 +1,49 @@
+/* Main container for the home page */
+.home-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  height: 100vh; /* Full viewport height */
+  background-color: #f4f4f4; /* Light background color */
+}
+
+/* Left side content: the text */
+.homeLeft {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.homeLeft h1 {
+  font-size: 48px;
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif;
+}
+
+.homeLeft p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* Right side: profile picture */
+.homeRight {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pf {
+  width: 300px; /* Adjust the size as needed */
+  height: 300px;
+  border-radius: 50%; /* Makes the picture round */
+  overflow: hidden; /* Ensures the image fits inside the circle */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pf img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the circle evenly */
+}
