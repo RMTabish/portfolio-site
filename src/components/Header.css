@@ -46,3 +46,7 @@ background-color: #fff;
 color: #333;
 
 }
+
+.hidden {
+    top: -100px; /* Hide the header by moving it up */
+  }

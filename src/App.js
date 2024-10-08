@@ -1,20 +1,18 @@
-import './App.css';
-import Head from './components/Head';
-import Home from './components/home'; // Correctly import based on file name
-
-import { HashRouter as Router, Routes, Route, Navigate } from 'react-router-dom'; // Import Navigate for redirect
+import React from 'react';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; 
+import './App.css'; // Make sure this file is in the src directory
+import Head from './components/Head'; // Importing from the components folder
+import Home from './components/home'; // Make sure 'Home.js' exists in the components folder
+import Experience from './components/Experience'; // Make sure 'Experience.js' exists in the components folder
 
 function App() {
   return (
     <Router>
-      <div className='App'>
+      <div className="App">
         <Head />
         <Routes>
-          {/* Route for the home page */}
           <Route path="/" element={<Home />} />
-          
-          {/* Redirect any invalid paths to the home page */}
-          <Route path="*" element={<Navigate to="/" />} />
+          <Route path="/experience" element={<Experience />} />
         </Routes>
       </div>
     </Router>
