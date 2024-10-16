@@ -1,52 +1,95 @@
-.header{
-background-color: #333;
-padding: 20px;
-color: aliceblue;
-display: flex;
-justify-content: space-between;
-align-items:center ;
-}
-
-/* the logo*/
-.logo h1{
+.header {
+    position: fixed; /* Fix the header at the top of the page */
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure the header is always on top */
+    background-color: #333;
+    padding: 10px; /* Reduce padding to decrease height */
+    color: aliceblue;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: transform 0.3s ease; /* Smooth hide/show transition */
+  }
+  
+  .header .logo h1 {
+    margin: 0;
+    font-size: 40px; /* Optionally reduce font size if you want the logo smaller */
+  }
+  
+  .nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .nav-links ul li {
+    margin: 0 10px; /* Optionally reduce margins between links */
+  }
+  
+  .nav-links ul li a {
+    color: white;
+    font-size: 16px; /* You can reduce the font size of links too */
+    padding: 5px 10px; /* Reduce link padding */
+    background-color: transparent;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .nav-links ul li a:hover {
+    background-color: #fff;
+    color: #333;
+  }
+  .logo h1{
 
     margin: 0;
     font-size: 50px;
     font-family: 'Great Vibes', cursive;
 }
 
-.nav-links ul{
-    
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
 
-}
-
-.nav-links ul li{
-    margin: 0 15px;
-}
-
-.nav-links ul li a {
-
-    color: white;
-    font-size: 18px;
-    padding: 10px 15px;
-    background-color: transparent;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, color 0.3 s ease;
-
-    font-family: 'Arial', sans-serif;
-}
-.nav-links ul li a:hover {
-
-background-color: #fff;
-color: #333;
-
-}
-
-.hidden {
-    top: -100px; /* Hide the header by moving it up */
+/* Media Query for Tablets and Smaller Laptops */
+@media (max-width: 1024px) {
+    .header {
+      padding: 8px 15px;
+    }
+  
+    .header .logo h1 {
+      font-size: 35px;
+    }
+  
+    .nav-links ul {
+      flex-direction: column; /* Stack the links vertically */
+      align-items: center;
+    }
+  
+    .nav-links ul li {
+      margin: 10px 0;
+    }
+  }
+  
+  /* Media Query for Mobile Devices */
+  @media (max-width: 768px) {
+    .header {
+      flex-direction: column;
+      padding: 5px 10px;
+    }
+  
+    .header .logo h1 {
+      font-size: 30px;
+    }
+  
+    .nav-links ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .nav-links ul li a {
+      font-size: 14px;
+      padding: 5px;
+    }
   }
