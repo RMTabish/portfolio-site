@@ -4,12 +4,14 @@ import './App.css';
 import Head from './components/Head'; 
 import Home from './components/home';
 import Experience from './components/Experience';
-
+import ProjectPage from './components/ProjectPage';
+import Review from './components/Review';
+import Certifications from './components/Certification';
 function App() {
   const [showHeader, setShowHeader] = useState(true); // Header visibility state
 
   useEffect(() => {
-    let lastScrollTop = 0; // To store the previous scroll position
+    let lastScrollTop = 0;
 
     const handleScroll = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
@@ -21,7 +23,9 @@ function App() {
         setShowHeader(true); // Show header when scrolling up
       }
 
-      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Prevent negative values
+ 
+
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -31,14 +35,21 @@ function App() {
     };
   }, []);
 
+
+
   return (
     <Router>
       <div className="App">
-        {/* Apply the hidden or visible class based on showHeader state */}
-        <Head className={showHeader ? 'header header-visible' : 'header header-hidden'} />
+        <Head showHeader={showHeader} /> {/* Pass header visibility state */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/experience" element={<Experience />} />
+          
+          <Route path="/projects" element={<ProjectPage />} />
+          
+          <Route path="/reviews" element={<Review />} />
+          
+          <Route path="/certifications" element={<Certifications />} />
         </Routes>
       </div>
     </Router>

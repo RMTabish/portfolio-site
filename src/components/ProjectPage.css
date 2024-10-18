@@ -1,0 +1,84 @@
+.project-page-container {
+    background-color: #333; /* Match the overall theme */
+    color: aliceblue;
+    padding: 50px 20px; /* Padding for spacing */
+    text-align: center; /* Center align the text */
+  }
+  
+  .project-list {
+    display: flex; /* Use flexbox for a side-by-side layout */
+    flex-wrap: wrap; /* Allow wrapping to the next line */
+    justify-content: center; /* Center the projects */
+    gap: 20px; /* Space between project cards */
+  }
+  
+  .project-card {
+    background: linear-gradient(135deg, #6e6e6e, #333);
+    border-radius: 10px;
+    padding: 10px; /* Padding for better fit */
+    width: calc(33% - 20px); /* 3 cards per row, minus gap */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease; /* Add hover effect */
+  }
+  
+  .project-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+  }
+  
+  .preview {
+    position: relative; /* Position for absolute children */
+    overflow: hidden; /* Hide overflow for images/videos */
+    border-radius: 10px; /* Rounded corners */
+    width: 100%; /* Ensure full width */
+    height: 200px; /* Fixed height for previews */
+  }
+  
+  .project-video {
+    position: absolute; /* Absolute positioning */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: fill; /* Fill to occupy the area */
+    border: none; /* Remove any borders */
+  }
+  
+  .project-image {
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    object-fit: cover; /* Cover to fill the area */
+  }
+  
+  .project-details {
+    margin-top: 10px; /* Space above details */
+  }
+  
+  .project-link {
+    display: inline-block;
+    margin-top: 10px; /* Space above link */
+    background-color: #444; /* Button background color */
+    color: aliceblue; /* Button text color */
+    padding: 10px 20px; /* Button padding */
+    border-radius: 5px; /* Rounded button corners */
+    text-decoration: none; /* Remove underline */
+    transition: background-color 0.3s ease; /* Button hover effect */
+  }
+  
+  .project-link:hover {
+    background-color: aliceblue; /* Change background on hover */
+    color: #333; /* Change text color on hover */
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 1024px) {
+    .project-card {
+      width: calc(50% - 20px); /* 2 cards per row on medium screens */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .project-card {
+      width: 100%; /* 1 card per row on small screens */
+    }
+  }
+  
