@@ -16,6 +16,33 @@
   }
 }
 
+/* General dark theme styles */
+.App.dark {
+  background-color: #333;
+  color: #ffffff;
+}
+
+/* General light theme styles */
+.App.light {
+  background-color: #f9f9f9;
+  color: #000000;
+}
+
+/* Additional component-specific styling if needed */
+.header.dark, .header.light {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.header.dark {
+  background-color: #333;
+}
+
+.header.light {
+  background-color: #f0f0f0;
+}
+
+/* You can also add theme-specific styles for other components */
+
 .App-header {
   background-color: #282c34;
   min-height: 100vh;

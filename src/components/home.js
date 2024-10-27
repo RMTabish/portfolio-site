@@ -1,21 +1,21 @@
+// Home.js
 import React from "react";
 import './Home.css';
 
 const Home = () => {
   return (
     <div className="home-container">
-      <div className="homeLeft">
+      <div className="home-left">
         <h1>Hey! I'M RAI TABISH</h1>
         <p>
           I'm a Computer Science major graduating in June 2025.<br />
-          An aspiring Software engineer with a focus on
-          data engineering, NLP, and computer vision, always exploring new technologies in software engineering.
+          An aspiring Software engineer with a focus on data engineering, NLP, and computer vision, always exploring new technologies in software engineering.
         </p>
-
         <a href={`${process.env.PUBLIC_URL}/Rai_Tabish_CV_7.pdf`} download className="download-btn">Download My Resume</a>
       </div>
-      <div className="homeright">
-        <div className="pf">
+      
+      <div className="home-right">
+        <div className="profile-image">
           <img src={`${process.env.PUBLIC_URL}/nicatDP.jpeg`} alt="Rai Tabish" />
         </div>
 

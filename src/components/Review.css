@@ -1,76 +1,70 @@
+/* Review container styling */
 .review-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position:relative;
-    overflow: hidden;
-    width: 100%;
-    max-width: 600px; /* Maximum width for larger screens */
-    height: 400px; /* Default height */
-    margin:auto;
- /* Centering the container */
-    background-color:#fafafa; /* Background color for the review section */
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 600px; /* Max width for larger screens */
+  height: 400px;
+  margin: auto;
+  background-color: #333; /* Ensure it matches the page background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  cursor: grab;
+}
+
+/* Carousel wrapper */
+.review {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 100%; /* Ensure the review div takes full width */
+}
+
+/* Review image styling */
+.review-image {
+  min-width: 100%; /* Each image takes up 100% of the container width */
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Arrow styling for navigation */
+.arrow {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 1;
+  padding: 10px;
+  position: absolute;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .review-container {
+      height: 300px;
   }
-  /* index.css or App.css */
-body {
-    background-color: #444;
-    color: #fff; /* Optional: change text color for better contrast */
-    margin: 0; /* Remove default margin */
-    font-family: Arial, sans-serif; /* Optional: set a font family */
-  }
-  
-  
-  .review {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-  }
-  
-  .review-image {
-    max-width: 100%;
-    max-height: 100%;
-    height: auto;
-    border-radius: 8px; /* Rounded corners for images */
-  }
-  
+
   .arrow {
-    background: none;
-    border: none;
-    font-size: 2rem; /* Size of the arrows */
-    cursor: pointer;
-    z-index: 1;
-    padding: 10px; /* Padding for click area */
+      font-size: 1.5rem;
   }
-  
-  .left-arrow {
-    position: absolute;
-    left: 10px; /* Adjust positioning */
+}
+
+@media (max-width: 480px) {
+  .review-container {
+      height: 250px;
   }
-  
-  .right-arrow {
-    position: absolute;
-    right: 10px; /* Adjust positioning */
+
+  .arrow {
+      font-size: 1.2rem;
   }
-  
-  /* Responsive Styles */
-  @media (max-width: 768px) {
-    .review-container {
-      height: 300px; /* Smaller height for mobile */
-    }
-  
-    .arrow {
-      font-size: 1.5rem; /* Smaller arrow size for mobile */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .review-container {
-      height: 250px; /* Smaller height for very small screens */
-    }
-  
-    .arrow {
-      font-size: 1.2rem; /* Even smaller arrow size */
-    }
-  }
-  
+}
