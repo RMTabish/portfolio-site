@@ -2,6 +2,19 @@ import React from 'react';
 import './Certifications.css';
 
 const certifications = [
+  
+  {
+    title: 'Intermediate SQL',
+    issuingOrganization: 'DataCamp',
+    image: `${process.env.PUBLIC_URL}/sql1.jpg`,
+    link: 'https://www.datacamp.com/completed/statement-of-accomplishment/course/325f0058e128c7f3ee22b16becd3607da1d6b32e'
+  },
+  {
+    title: 'Google AI Essentials',
+    issuingOrganization: 'Google',
+    image: `${process.env.PUBLIC_URL}/google-ai-essentials.png`,
+    link: 'https://www.credly.com/badges/db9ef061-2a6e-476a-8a6f-11e6c085ce8c'
+  },
   {
     title: 'Introduction to Kubernetes',
     issuingOrganization: 'Data Camp',
