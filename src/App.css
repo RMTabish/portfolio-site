@@ -40,6 +40,50 @@
 .header.light {
   background-color: #f0f0f0;
 }
+/* Global dark theme */
+.App.dark {
+  background-color: #333; /* Dark background for entire site */
+  color: #ffffff; /* Light text color for dark mode */
+}
+
+/* Global light theme */
+.App.light {
+  background-color: #f9f9f9; /* Light background for entire site */
+  color: #000000; /* Dark text color for light mode */
+}
+
+/* Header-specific theme styling */
+.header.dark {
+  background-color: #333;
+  color: #ffffff;
+}
+
+.header.light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Example of component-specific theme styling (e.g., review section) */
+.review-container.dark {
+  background-color: #333;
+  color: #ffffff;
+}
+
+.review-container.light {
+  background-color: #f9f9f9;
+  color: #000000;
+}
+
+/* Additional styling for other sections as needed */
+.experience-container.dark, .home-container.dark {
+  background-color: #333;
+  color: #ffffff;
+}
+
+.experience-container.light, .home-container.light {
+  background-color: #f9f9f9;
+  color: #000000;
+}
 
 /* You can also add theme-specific styles for other components */
 

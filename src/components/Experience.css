@@ -1,21 +1,18 @@
-/* Main container */
+/* Experience container styling */
 .experience-container {
   position: relative;
   width: 100%;
   background-color: #333;
   color: aliceblue;
   padding: 50px 0;
-  margin-top: 80px;
 }
 
-/* Timeline container */
 .timeline {
   position: relative;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-/* Vertical line for the timeline */
 .timeline::before {
   content: '';
   position: absolute;
@@ -24,6 +21,8 @@
   width: 2px;
   height: 100%;
   background-color: aliceblue;
+  transform: translateX(-50%);
+  z-index: 1;
 }
 
 /* Experience box styling */
@@ -35,62 +34,46 @@
   border-radius: 10px;
   margin-bottom: 40px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  z-index: 2;
 }
 
-/* Align left and right boxes on larger screens */
+/* Align left for odd-numbered boxes */
 .experience-box.left {
-  margin-right: 10%;
+  margin-right: 55%; /* Push left-aligned items to the left of the timeline */
   text-align: right;
 }
 
+/* Align right for even-numbered boxes */
 .experience-box.right {
-  margin-left: 10%;
+  margin-left: 55%; /* Push right-aligned items to the right of the timeline */
   text-align: left;
 }
 
-/* Center both left and right boxes on tablets and smaller laptops */
+/* Responsive adjustments */
 @media (max-width: 1024px) {
   .experience-box {
-    width: 80%;
-    margin: 20px auto;
-    text-align: left;
-    margin-top: 60px;
+    width: 80%; /* Take more space on smaller screens */
+    margin: 0 auto; /* Center the boxes */
   }
-  
-  /* Adjust the timeline line to be left-aligned */
+
   .timeline::before {
-    left: 10px;
+    left: 10px; /* Move the timeline line to the left side */
   }
 }
 
-/* Full-width single-column layout for mobile devices */
 @media (max-width: 768px) {
-  .experience-container {
-    padding: 30px 0;
+  .experience-box {
+    width: 90%; /* Full width on mobile */
+    margin: 0 auto; /* Center the boxes */
+    text-align: left;
   }
 
   .timeline::before {
-    left: 10px; /* Align the timeline line to the far left */
+    left: 10px;
   }
-
-  .experience-box {
-    width: 90%;
-    margin: 20px auto;
-    text-align: left;
-    padding: 15px;
-    box-sizing: border-box; /* Ensure padding doesn’t affect width */
-  }
-
-  /* Font adjustments for mobile readability */
-  .experience-box h2 {
-    font-size: 18px;
-  }
-
-  .experience-box h4 {
-    font-size: 16px;
-  }
-
-  .experience-box p {
-    font-size: 14px;
-  }
+    /* Remove margin adjustments for mobile */
+    .experience-box.left, .experience-box.right {
+      margin-left: auto;
+      margin-right: auto;
+    }
 }

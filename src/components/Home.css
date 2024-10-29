@@ -116,15 +116,15 @@
   .home-left {
     flex: 1;
     text-align: left;
-    max-width: 50%;
+    max-width: 60%;
   }
 
   .home-left h1 {
-    font-size: 48px;
+    font-size: 55px;
   }
 
   .home-left p {
-    font-size: 18px;
+    font-size: 25px;
   }
 
   .home-right {
@@ -134,8 +134,8 @@
   }
 
   .profile-image {
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
   }
 
   .social-links {

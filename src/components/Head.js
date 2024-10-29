@@ -1,14 +1,26 @@
 // Head.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Header.css';
 
-const Head = ({ toggleTheme, theme }) => {
+const Head = ({ theme }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
   };
+
+  // Function to close sidebar on outside click
+  const handleOutsideClick = (event) => {
+    if (sidebarOpen && !event.target.closest('.nav-links') && !event.target.closest('.hamburger')) {
+      setSidebarOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener('click', handleOutsideClick);
+    return () => document.removeEventListener('click', handleOutsideClick);
+  }, [sidebarOpen]);
 
   return (
     <header className="header">
@@ -32,31 +44,7 @@ const Head = ({ toggleTheme, theme }) => {
           <li><Link to="/experience">Experience</Link></li>
           <li><Link to="/reviews">Reviews</Link></li>
         </ul>
-        
-        {/* Theme toggle inside the sidebar for mobile */}
-        <div className="sidebar-theme-toggle">
-          <label className="toggle-label">
-            <input
-              type="checkbox"
-              checked={theme === 'light'}
-              onChange={toggleTheme}
-            />
-            <span className="toggle-slider"></span>
-          </label>
-        </div>
       </nav>
-
-      {/* Theme toggle in header for larger screens */}
-      <div className="theme-toggle">
-        <label className="toggle-label">
-          <input
-            type="checkbox"
-            checked={theme === 'light'}
-            onChange={toggleTheme}
-          />
-          <span className="toggle-slider"></span>
-        </label>
-      </div>
     </header>
   );
 };
