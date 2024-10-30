@@ -4,6 +4,14 @@ import "./ProjectPage.css";
 // Example project data
 const initialProjects = [
   {
+    title: "DataKaleidos",
+    description: "Building Knowledge graph with AI and augmenting LLM to search the KG",
+    technologies: ["Python", "Data Engieering", "AI"],
+    imageUrl: `${process.env.PUBLIC_URL}/DataKal.png`,
+    projectLink: "https://github.com/RMTabish/food-slicer",
+    features: ["3D"]
+  },
+  {
     title: "Food Slicer",
     description: "A 3D Game Developed in Unity ",
     technologies: ["Unity3D", "C#", "Blender"],
@@ -15,7 +23,7 @@ const initialProjects = [
     title: "Fast Society Management System",
     description: "A Student Society Management made in C#",
     technologies: ["SQL", "Windows Forms", "Database Design","C#"],
-    imageUrl: `${process.env.PUBLIC_URL}/fsms.png`,
+    imageUrl: `${process.env.PUBLIC_URL}/societymng.png`,
     projectLink: "https://github.com/RMTabish/Fast-Society-Management-s",
     features: ["User authentication", "notification", "Responsive design"]
   },
